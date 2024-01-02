@@ -1,0 +1,58 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define Demi_KH ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);
+#define uill unsigned int long long
+#define ill int long long
+#define ld long double
+#define ll long long
+#define str string
+#define dl double
+#define sh short
+#define fl float
+#define vct vector
+#define fixed(n) fixed << setprecision(n)
+#define minv(v) *min_element(all(v))
+#define maxv(v) *max_element(all(v))
+#define rall(v) v.rbegin(),v.rend()
+#define all(v) v.begin(),v.end()
+#define rall(v) v.rbegin(),v.rend()
+#define sz(s) (int)s.size()-1
+#define yes cout<<"YES\n"
+#define no cout<<"NO\n"
+#define el "\n"
+#define sp " "
+const float pi = 3.141592653;
+//freopen("in.txt", "r", stdin);
+//freopen("out.txt", "w", stdout);
+int main()
+{
+    Demi_KH;
+    str s;
+    cin>>s;
+    int l=0,r=sz(s);
+    
+    while(l<=r){
+        if(s[l]!=s[r]){
+            if(s[r]=='?')
+                s[r]=s[l];
+            else if(s[l]=='?')
+                s[l]=s[r];
+        }
+        else{
+            if(s[l]=='?'&&s[r]=='?')
+            {s[l]='a';
+            s[r]='a';}
+        }
+        l++;r--;
+    }
+    l=0,r=sz(s);
+    while(l<r){
+        if(s[l]!=s[r]){
+            cout<<-1;
+            return 0;
+        }
+        l++;r--;
+    }
+    cout<<s;
+    return 0;
+}

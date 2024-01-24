@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define Demi_KH ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);
+int main() {
+    Demi_KH;
+    int times,cnt=0;
+    cin>>times;
+    while (times--) {
+        int p,q;
+        cin>>p>>q;
+        if(abs(p-q)>=2)
+            cnt++;
+    }
+    cout<<cnt;
+    return 0;
+}

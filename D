@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define Demi_KH ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);
+int main() {
+    //freopen("mex.in", "r", stdin);
+    //freopen("out.txt", "w", stdout);
+    Demi_KH;
+    int b,l,cnt=0;
+    cin>>l>>b;
+    while(l<=b) {
+    l*=3;b*=2;cnt++;
+    }
+    cout<<cnt;
+    return 0;
+}
